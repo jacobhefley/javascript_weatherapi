@@ -1,7 +1,7 @@
 var apiKey = require('./../.env').apiKey;
 
-exports.Weather = function(temperature) {
-  this.temperature = temperature;
+exports.Weather = function() {
+  this.temperature = "";
 }
 
 exports.Weather.prototype.getWeather = function(city) {
@@ -10,5 +10,6 @@ exports.Weather.prototype.getWeather = function(city) {
 
 exports.Weather.prototype.getCelsius = function() {
   this.celsius = this.temperature - 273.15;
+  debugger;
   return this.celsius.toFixed(2);
 }
